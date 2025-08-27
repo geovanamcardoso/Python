@@ -42,6 +42,7 @@ print(matriz)
 '''
 #Pedir 12 valores e armazenar em uma matriz 3x4 e exibi-la. Depois, trocar todos maiores que 100 por 0 e exibir.
 '''
+#Preenchemos uma lista (linha) com elementos (colunas). Após preenchida, encaixamos essa linha com colunas na matriz. Repetimos até alcançar o número desejado de linhas.
 matriz = []
 
 for linhas in range(3):
@@ -124,6 +125,7 @@ for l in range(len(matriz)):
 
 print()
 print(f"O número {numEsc} foi encontrado {vezes} vezes.")
+
 
 
 
