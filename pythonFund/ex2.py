@@ -1,44 +1,12 @@
-def somar(a, b):
-    return a + b
+def mdc(a, b):
+    if a >= b and a % b == 0: #Se 'A' for maior ou igual a B e se 'A' for divisível por B
+        return b #Retorna o mesmo número B, pois é o maior número que ele é divisível e o A também é divísivel
 
-def subtrair(a, b):
-    return a - b
+    elif a < b: #Se 'A' for menor, refaz a função com os números trocados e cai no primeiro IF
+        return mdc(b,a)
+    else: # ????
+        return mdc(b, a % b)
 
-def dividir(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError:
-        print('Erro de divisão por zero.')
-
-while True:
-    try:
-        print('1 - Soma')
-        print('2 - Subtração')
-        print('3 - Divisão')
-        opcao = int(input('Escolha uma opção: '))
-
-        if opcao < 1 or opcao > 3:
-            raise TypeError
-    except TypeError:
-        print("Opção inválida! Insira um valor de 1 a 3!")
-        
-    except ValueError:
-        print('O valor informado deve ser inteiro')
-    else:
-        try:
-            a = int(input('Primeiro numero: '))
-            b = int(input('Segundo numero: '))
-        except ValueError:
-            print('Os numeros informados devem ser inteiro')
-        else:
-            match opcao:
-                case 1:
-                    print(somar(a, b))
-                case 2:
-                    print(subtrair(a, b))
-                case 3:
-                   print(dividir(a, b))
-                case _:
-                    print('Opção inválida')
-            break
-
+a = int(input("Digite o primeiro número: "))
+b = int(input("Digite o segundo número: "))
+print(mdc(a,b))
