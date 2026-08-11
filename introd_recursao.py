@@ -31,3 +31,21 @@ def potencia(base, expoente):
     return base * (potencia(base, expoente - 1))
 
 print(potencia(3,5))
+
+#Fibonacci
+def fib_it(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+        return b
+
+print(fib_it(6))
+
+def fib_rec(n):
+    if n <= 1:
+        return n
+    return fib_rec(n - 1) + fib_rec(n - 2)
+
+#Inverter string
